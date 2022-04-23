@@ -1,0 +1,81 @@
+#!/bin/bash
+# This was ripped (with credits) from here: https://github.com/khamer/bin/blob/master/overload
+# I wonder if there's a better way to include it with dotfiles?
+
+OVERLOAD_VERSION="2.0"
+
+
+pass_through="$@"
+
+## Trickery for determining whether this is being sourced.
+if [[ ${0##*/} == 'bash' ]]; then
+	if [ $# -gt 0 ]; then
+		while [ $# -gt 0 ]; do
+			eval "$1() { overload $1 \"\$@\"; }"
+			shift
+		done
+	else
+		echo Overloaded commands: $(declare -f | grep -B 2 overload | awk '/\(\)/{print $1}' | xargs)
+	fi
+else
+
+	## Normal execution
+
+	function version() {
+		echo "Current version: $OVERLOAD_VERSION";
+	}
+
+	function help() {
+		echo "Usage: overload COMMAND [ARGS]"
+		version
+	}
+
+	function underscorize() {
+		underscorize="$*"
+		echo "${underscorize// /_}"
+	}
+	
+	function findBinary() {
+		find_binary="$(which -a $1 | grep -v "$0" | head -n 1)"
+		echo $find_binary
+	}
+
+	function main() {
+		executed="$0"
+		command="${executed##*/}"
+
+		## If calling overload directly, use the first arg as the command.
+		if [[ $command == 'overload' ]]; then
+			command="${1##*/}"
+			shift
+		fi
+
+		original_command="$(findBinary $command)"
+
+		if [[ -e $HOME/.overloadrc ]]; then
+			source $HOME/.overloadrc
+		fi
+
+		found=0
+		N=$#
+		while [ $N -ge 0 ]; do
+			func=$(underscorize $command "${@:1:$N}")
+			params=${@:$N+1}
+
+			if [[ "$(type -t $func)" == "function" ]]; then
+				found=1
+				break
+			fi
+
+			N=$(($N-1))
+		done
+
+		if [ $found -gt 0 ]; then
+			$func "${@:$N+1}"
+		else
+			$pass_through
+		fi
+	}
+
+	main "$@"
+fi
