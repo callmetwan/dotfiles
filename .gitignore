@@ -1,0 +1,13 @@
+.idea/
+.DS_Store
+.config/karabiner/automatic_backups
+install/.config/configstore
+install/.config/gh/
+install/.config/karabiner/automatic_backups/
+/install/.config/yarn/
+/install/.config/iterm2/
+/install/bin/hris.cfg
+/install/bin/lm.categories
+/install/bin/lm.cfg
+/install/bin/lm.tags
+/install/.config/gcloud/
