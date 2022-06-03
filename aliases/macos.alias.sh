@@ -1,15 +1,14 @@
 #!/bin/bash
 
-
-#-----------------------------------------------------------------------------------------------#
-#                                           ALIASES                                             #
-#-----------------------------------------------------------------------------------------------#
+# Source default
+scriptDir=$(dirname $0)
+source "$scriptDir/default.alias.sh"
 
 # PATH
 export PATH="/usr/local/opt/python/libexec/bin:/usr/local/bin:/usr/local:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/.local/bin:/sbin:~/bin:/Users/anthony/.composer/vendor/bin:/Users/anthony/dev/scripts:PATH"
 export PATH=$PATH:"/Users/anthony/.platformio/penv/bin"
 
-# Alis
+# Alias
 alias sublime="subl"
 
 # Navigation
@@ -71,5 +70,3 @@ if [ -f '/Users/anthony/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/anthony
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/anthony/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/anthony/google-cloud-sdk/completion.zsh.inc'; fi
 export GOOGLE_APPLICATION_CREDENTIALS=~/.config/gcloud/application_default_credentials.json
-
-
