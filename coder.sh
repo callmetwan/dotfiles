@@ -2,4 +2,4 @@
 
 # Source default
 scriptDir=$(dirname $0)
-source "$scriptDir/default.alias.sh"
+source "$scriptDir/default.sh"
