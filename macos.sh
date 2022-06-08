@@ -1,8 +1,11 @@
 #!/bin/bash
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/anthony/.oh-my-zsh"
 
 # Source default
 scriptDir=$(dirname $0)
 source "$scriptDir/default.sh"
+
 
 # PATH
 export PATH="/usr/local/opt/python/libexec/bin:/usr/local/bin:/usr/local:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/.local/bin:/sbin:~/bin:/Users/anthony/.composer/vendor/bin:/Users/anthony/dev/scripts:PATH"
