@@ -1,9 +1,7 @@
 #!/bin/bash
 
-
-#-----------------------------------------------------------------------------------------------#
-#                                           ALIASES                                             #
-#-----------------------------------------------------------------------------------------------#
+# The current directory this script is running in
+scriptDir=$(dirname $0)
 
 # Git
 alias gs='git status'
@@ -105,7 +103,7 @@ ZSH_THEME="bira-custom"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+ ZSH_CUSTOM="$scriptDir/oh-my-zsh-custom/"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
