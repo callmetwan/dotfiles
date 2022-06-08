@@ -4,7 +4,7 @@
 export ZSH="/home/coder/.oh-my-zsh"
 
 #Custom prompt symbol
-export CUSTOM_PROMPT_SYMBOL="➜"
+export CUSTOM_PROMPT_SYMBOL=" ➜"
 
 # Source default
 scriptDir=$(dirname $0)
