@@ -11,6 +11,7 @@ else
 fi
 
 local current_dir='%{$fg[blue]%}%~%{$reset_color%}'
+[[ -n $CUSTOM_PROMPT_SYMBOL ]] && user_symbol="$CUSTOM_PROMPT_SYMBOL"
 
 #local rvm_ruby=''
 #if which rvm-prompt &> /dev/null; then
