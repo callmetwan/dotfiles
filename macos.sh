@@ -21,11 +21,13 @@ alias kw="~/dev/kazoo-web"
 
 # Quick open
 alias pr='gh pr create -w' # Create a PR on GitHub opening in a new tab
+alias cg='git rev-parse --abbrev-ref HEAD | tr -d "\n" | pbcopy'
 alias zshconfig="subl ~/.zshrc"
 alias zconfig="subl ~/.zshrc"
 alias dev="/Users/anthony/dev"
 alias hosty="subl /etc/hosts"
 alias screensaver="sudo open -a /System/Library/Frameworks/ScreenSaver.framework/Versions/A/Resources/ScreenSaverEngine.app"
+
 
 # Restart services
 alias cb="coder workspaces rebuild anthony-dev; coder workspaces watch-build anthony-dev"

@@ -1,0 +1,24 @@
+[include]
+    path="./general"
+[core]
+    # leaving sublime editor command because I can never
+    # remember the -w -n commands, which tell cli to
+    # wait for the file to be saved and to close
+    # editor = subl -w -n
+    editor = vim
+	excludesfile = /Users/anthony/.gitignore_global
+[credential]
+    helper = osxkeychain
+[diff]
+	tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[merge]
+	tool = Kaleidoscope
+	renamelimit = 2373
+[mergetool]
+    keepBackup = false
+	prompt = false
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustExitCode = true

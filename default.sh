@@ -24,10 +24,10 @@ alias amend-edit="git commit --amend"
 
 
 # Navigation
-alias kw="cd ~/kazoo-web"
-alias yei="cd ~/web-legacy-rr"
+alias kw="cd ~/dev/kazoo-web"
+alias yei="cd ~/dev/web-legacy-rr"
 alias yy='yarn && yarn coder:develop'
-alias hg='cd ~/hgapp'
+alias hg='cd ~/dev/hgapp'
 
 # Utility
 alias ll='ls -laGFh'

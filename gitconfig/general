@@ -1,0 +1,32 @@
+[user]
+	name = Anthony Garritano
+[alias]
+	df = difftool
+    st = status
+    amend = commit --amend
+    ammend = amend
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    remote-delete = push origin --delete
+    ffmdev = !git fetch origin development  && git merge development
+    plush = "!f() { git pull && git push; }; f" ;
+    spush = "!f() { git stash && git pull && git push && git stash apply; }; f" ;
+    hasmerged = "!f() { git log $1 $2 --oneline --date-order --merges --reverse -1; }; f" ;
+    delete-remote = "!f() { git push origin --delete $1; }; f" ;
+    drl = "!f() { git branch -d $1 && git push origin --delete $1; }; f" ;
+    push-to-remote = "!f() { git push --set-upstream origin $1; }; f" ;
+    force-purge-branches = "!f(){ git branch | grep -v "master" | grep -v "keep" | grep -v ^* | xargs git branch -D;}; f"
+    shove = "!git push --force-with-lease origin \"$(git rev-parse --abbrev-ref HEAD)\""\
+[core]
+	pager = less -F -X
+[push]
+	default = current
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+    required = true
+	process = git-lfs filter-process
+[pull]
+	rebase = false
+[rerere]
+	enabled = 1
