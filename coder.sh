@@ -10,3 +10,7 @@ export CUSTOM_PROMPT_SYMBOL=" ➜"
 scriptDir=$(dirname $0)
 source "$scriptDir/default.sh"
 
+# Navigation
+alias kw="cd ~/kazoo-web"
+alias yei="cd ~/web-legacy-rr"
+alias hg='cd ~/hgapp'

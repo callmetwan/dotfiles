@@ -22,13 +22,6 @@ alias amend="git commit --amend --no-edit"
 alias ammend="git commit --amend --no-edit"
 alias amend-edit="git commit --amend"
 
-
-# Navigation
-alias kw="cd ~/dev/kazoo-web"
-alias yei="cd ~/dev/web-legacy-rr"
-alias yy='yarn && yarn coder:develop'
-alias hg='cd ~/dev/hgapp'
-
 # Utility
 alias ll='ls -laGFh'
 alias grep='grep --color=always'

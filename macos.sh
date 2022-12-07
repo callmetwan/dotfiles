@@ -17,7 +17,9 @@ alias sublime="subl"
 
 # Navigation
 alias cf="~/dev/confetti"
-alias kw="~/dev/kazoo-web"
+alias kw="cd ~/dev/kazoo-web"
+alias yei="cd ~/dev/web-legacy-rr"
+alias hg='cd ~/dev/hgapp'
 
 # Quick open
 alias pr='gh pr create -w' # Create a PR on GitHub opening in a new tab
