@@ -1,6 +1,7 @@
 [user]
 	name = Anthony Garritano
 [alias]
+    nuke = "! git checkout . && git clean -fd"
 	df = difftool
     st = status
     amend = commit --amend
