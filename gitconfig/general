@@ -31,3 +31,5 @@
 	rebase = false
 [rerere]
 	enabled = 1
+[pager]
+	branch = false
