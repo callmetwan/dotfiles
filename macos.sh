@@ -62,14 +62,14 @@ alias ag="ag --ignore-dir={Library,Photos,Pictures}"
 alias moon="vim ~/qmk_firmware/keyboards/moonlander/keymaps/odyssey/keymap.c"
 alias makemoon="cd ~/qmk_firmware; make moonlander:odyssey; cp .build/moonlander_odyssey.bin ~/Downloads/moonlander_odyssey_latest.bin; ~/Downloads/wally-cli ~/Downloads/moonlander_odyssey_latest.bin; cd -"
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+#[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ## Below are for Google Cloud utilities i.e. gsutil
 # Multithreading has an issue in Python 3.8, use 3.7 for gsutil
 export CLOUDSDK_PYTHON=/usr/local/opt/python@3.7/bin/python3
 export PATH="/Applications/Sublime Text.app/Contents/SharedSupport/bin:$PATH"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 #eval "$(pyenv init -)"
 # The next line updates PATH for the Google Cloud SDK.
