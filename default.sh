@@ -116,6 +116,3 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion match_prev_cmd)
 # https://github.com/zsh-users/zsh-autosuggestions/issues/544
 # https://github.com/zsh-users/zsh-autosuggestions#disabling-automatic-widget-re-binding
 ZSH_AUTOSUGGEST_MANUAL_REBIND=true
-
-# Requires FNM to be installed
-eval "$(fnm env --use-on-cd)"
