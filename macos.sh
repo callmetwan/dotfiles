@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/bin/zsh
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/anthony/.oh-my-zsh"
-
 
 # Source default
 scriptDir=$(dirname $0)

@@ -1,2 +1,5 @@
 [include]
     path=general
+
+[user]
+    email=anthony.garritano@kazoohr.com
