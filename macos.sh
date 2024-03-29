@@ -15,10 +15,10 @@ export PATH=$PATH:"/Users/anthony/.platformio/penv/bin"
 alias sublime="subl"
 
 # Navigation
-alias cf="~/dev/confetti"
 alias kw="cd ~/dev/kazoo-web"
 alias yei="cd ~/dev/web-legacy-rr"
 alias hg='cd ~/dev/hgapp'
+alias mrpop='cd ~/dev/misterpoppins'
 
 # Quick open
 alias pr='gh pr create -w' # Create a PR on GitHub opening in a new tab
