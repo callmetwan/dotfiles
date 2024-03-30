@@ -1,11 +1,7 @@
-#!/bin/zsh
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/anthony/.oh-my-zsh"
 
 # Source default
 scriptDir=$(dirname $0)
 source "$scriptDir/default.sh"
-
 
 # PATH
 export PATH="/usr/local/opt/python/libexec/bin:/usr/local/bin:/usr/local:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/.local/bin:/sbin:~/bin:/Users/anthony/.composer/vendor/bin:/Users/anthony/dev/scripts:PATH"
@@ -13,12 +9,6 @@ export PATH=$PATH:"/Users/anthony/.platformio/penv/bin"
 
 # Alias
 alias sublime="subl"
-
-# Navigation
-alias kw="cd ~/dev/kazoo-web"
-alias yei="cd ~/dev/web-legacy-rr"
-alias hg='cd ~/dev/hgapp'
-alias mrpop='cd ~/dev/misterpoppins'
 
 # Quick open
 alias pr='gh pr create -w' # Create a PR on GitHub opening in a new tab
@@ -31,8 +21,6 @@ alias screensaver="sudo open -a /System/Library/Frameworks/ScreenSaver.framework
 
 
 # Restart services
-alias cb="coder workspaces rebuild anthony-dev; coder workspaces watch-build anthony-dev"
-alias cw="coder workspaces watch-build anthony-dev"
 alias flushdns="dscacheutil -flushcache && sudo killall -HUP mDNSResponder"
 alias restartspotlight="killall Spotlight"
 alias imgdim='sips -g pixelHeight -g pixelWidth $1'
@@ -53,13 +41,6 @@ export PATH="/usr/local/opt/openssl/bin:$PATH"
 export REACT_EDITOR="subl"
 export REACT_DEBUGGER="open -g 'rndebugger://set-debugger-loc?port=8081' || react-native start"
 
-#### Adam's original stuff I'm not using
-alias lunch='cd ~/code/lunchline'
-alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-alias resetMessages="killall Messages && killall Dock && open -a Messages"
-alias ag="ag --ignore-dir={Library,Photos,Pictures}"
-alias moon="vim ~/qmk_firmware/keyboards/moonlander/keymaps/odyssey/keymap.c"
-alias makemoon="cd ~/qmk_firmware; make moonlander:odyssey; cp .build/moonlander_odyssey.bin ~/Downloads/moonlander_odyssey_latest.bin; ~/Downloads/wally-cli ~/Downloads/moonlander_odyssey_latest.bin; cd -"
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

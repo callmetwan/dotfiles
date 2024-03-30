@@ -1,6 +1,11 @@
 #!/bin/zsh
 # The current directory this script is running in
 scriptDir=$(dirname $0)
+
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/anthony/.oh-my-zsh"
+
+
 # Git
 alias gs='git status'
 alias gb='git_branch_advanced'
@@ -26,7 +31,8 @@ alias grep='grep --color=always'
 alias vimrc='vim ~/.vimrc'
 # TODO: Should we replace this with "exec bash -l"?
 alias refresh='source ~/.bash_profile; source ~/.env'
-alias edov="vim ~/.overloadrc" # This is the config file for overloading bash methods like "git" which I use to prompt if I've run mvn install before pushing
+alias edov="vim ~/.overloadrc" 
+# This is the config file for overloading bash methods like "git" which I use to prompt if I've run mvn install before pushing
 alias dotinstall="source ~/dotfiles/install/install.sh"
 
 
@@ -95,7 +101,7 @@ ZSH_THEME="bira-custom"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
- ZSH_CUSTOM="$scriptDir/oh-my-zsh-custom/"
+ ZSH_CUSTOM="$scriptDir/../../oh-my-zsh-custom/"
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -114,4 +120,4 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion match_prev_cmd)
 # https://github.com/zsh-users/zsh-autosuggestions/issues/544
 # https://github.com/zsh-users/zsh-autosuggestions#disabling-automatic-widget-re-binding
 ZSH_AUTOSUGGEST_MANUAL_REBIND=true
-eval "$(fnm env --use-on-cd)"
+
