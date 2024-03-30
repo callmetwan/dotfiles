@@ -4,11 +4,11 @@
 export ZSH="/home/coder/.oh-my-zsh"
 
 #Custom prompt symbol
-export CUSTOM_PROMPT_SYMBOL=" ➜"
+export CUSTOM_PROMPT_SYMBOL=" ➜➜➜"
 
 # Source default
 scriptDir=$(dirname $0)
-source "$scriptDir/default.sh"
+source "$scriptDir/base/default.sh"
 
 # Navigation
 alias kw="cd ~/kazoo-web"
