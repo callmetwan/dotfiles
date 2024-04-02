@@ -2,9 +2,6 @@
 # The current directory this script is running in
 scriptDir=$(dirname $0)
 
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/anthony/.oh-my-zsh"
-
 
 # Git
 alias gs='git status'
