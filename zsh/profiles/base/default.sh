@@ -2,7 +2,6 @@
 # The current directory this script is running in
 scriptDir=$(dirname $0)
 
-
 # Git
 alias gs='git status'
 alias gb='git_branch_advanced'
