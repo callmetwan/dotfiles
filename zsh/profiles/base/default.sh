@@ -21,6 +21,13 @@ alias amend="git commit --amend --no-edit"
 alias ammend="git commit --amend --no-edit"
 alias amend-edit="git commit --amend"
 
+# Docker
+alias dcb="docker compose build"
+alias dcd="docker compose down"
+alias dcu="docker compose up"
+alias dcr="docker compose down && docker compose up"
+alias dcrb="docker compose down && docker compose build && docker compose up"
+
 # Utility
 alias ll='ls -laGFh'
 alias grep='grep --color=always'
