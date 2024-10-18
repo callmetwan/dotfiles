@@ -16,7 +16,7 @@
     delete-remote = "!f() { git push origin --delete $1; }; f" ;
     drl = "!f() { git branch -d $1 && git push origin --delete $1; }; f" ;
     push-to-remote = "!f() { git push --set-upstream origin $1; }; f" ;
-    force-purge-branches = "!f(){ git branch | grep -v "master" | grep -v "keep" | grep -v ^* | xargs git branch -D;}; f"
+    force-purge-branches = "!f(){ git branch | grep -v "master" | grep -v "main" | grep -v "keep" | grep -v ^* | xargs git branch -D;}; f"
     shove = "!git push --force-with-lease origin \"$(git rev-parse --abbrev-ref HEAD)\""\
 [core]
 	pager = less -F -X
